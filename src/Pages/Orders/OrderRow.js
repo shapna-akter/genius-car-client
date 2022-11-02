@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-const OrderRow = ({ order }) => {
-    const { serviceName, customer, phone, price, service } = order;
+const OrderRow = ({ order, handleDelete }) => {
+    const {_id, serviceName, customer, phone, price, service } = order;
     const  [orderService, setOrderService]  = useState({});
 
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/services/${service}`)
-    //         .then(res => res.json())
-    //         .then(data => setOrderService(data))
-    // }, [service])
-
+    // service er moddhe j img ache seta show koranor jonno useEffect use korechi
     useEffect(() => {
         fetch(`http://localhost:5000/services/${service}`)
             .then(res => res.json())
@@ -20,7 +15,7 @@ const OrderRow = ({ order }) => {
         <tr>
             <th>
                 <label>
-                    <button className="btn btn-ghost">X</button>
+                    <button onClick={()=> handleDelete(_id)} className="btn btn-ghost">X</button>
                 </label>
             </th>
             <td>
