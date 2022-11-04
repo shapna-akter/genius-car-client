@@ -30,7 +30,7 @@ const Checkout = () => {
         // }
 
         //server side a data send korar jonno post method use korbo
-        fetch('http://localhost:5000/orders', {
+        fetch('https://genius-car-server-omega.vercel.app/orders', {
             method: 'POST', // 
             headers: {
                 'Content-Type': 'application/json',
