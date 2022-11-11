@@ -13,7 +13,6 @@ const Header = () => {
         .catch()
     }
 
-
     const menuItems = <>
         <li className='font-semibold'><Link to='/'>Home</Link></li>
         {

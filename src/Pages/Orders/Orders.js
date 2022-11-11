@@ -6,6 +6,7 @@ const Orders = () => {
     const { user, logOut } = useContext(AuthContext);
     const [orders, setOrders] = useState([])
 
+    //table a order show korar jnno
     useEffect(() => {
         fetch(`https://genius-car-server-omega.vercel.app/orders?email=${user?.email}`, {
             headers: {

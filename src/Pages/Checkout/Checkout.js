@@ -42,7 +42,7 @@ const Checkout = () => {
             .then((data) => {
                 console.log('Success:', data);
                 if (data.acknowledged) {
-                    alert('Order Placed succecssfully')
+                    alert('Order Placed successfully')
                     form.reset()
                 }
             })
